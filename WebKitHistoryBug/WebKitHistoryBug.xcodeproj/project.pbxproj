@@ -15,6 +15,7 @@
 		C0B0C72925F80B3C0035EF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C72725F80B3C0035EF40 /* LaunchScreen.storyboard */; };
 		C0B0C73425F80B3C0035EF40 /* WebKitHistoryBugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0C73325F80B3C0035EF40 /* WebKitHistoryBugTests.swift */; };
 		C0B0C73F25F80B3D0035EF40 /* WebKitHistoryBugUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0C73E25F80B3D0035EF40 /* WebKitHistoryBugUITests.swift */; };
+		C0B0C75125F80ED00035EF40 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C75025F80ED00035EF40 /* test.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C0B0C73A25F80B3C0035EF40 /* WebKitHistoryBugUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebKitHistoryBugUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B0C73E25F80B3D0035EF40 /* WebKitHistoryBugUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitHistoryBugUITests.swift; sourceTree = "<group>"; };
 		C0B0C74025F80B3D0035EF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B0C75025F80ED00035EF40 /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		C0B0C71B25F80B380035EF40 /* WebKitHistoryBug */ = {
 			isa = PBXGroup;
 			children = (
+				C0B0C74F25F80EA30035EF40 /* resources */,
 				C0B0C71C25F80B380035EF40 /* AppDelegate.swift */,
 				C0B0C71E25F80B380035EF40 /* SceneDelegate.swift */,
 				C0B0C72025F80B380035EF40 /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				C0B0C74025F80B3D0035EF40 /* Info.plist */,
 			);
 			path = WebKitHistoryBugUITests;
+			sourceTree = "<group>";
+		};
+		C0B0C74F25F80EA30035EF40 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0B0C75025F80ED00035EF40 /* test.html */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B0C75125F80ED00035EF40 /* test.html in Resources */,
 				C0B0C72925F80B3C0035EF40 /* LaunchScreen.storyboard in Resources */,
 				C0B0C72625F80B3C0035EF40 /* Assets.xcassets in Resources */,
 				C0B0C72425F80B380035EF40 /* Main.storyboard in Resources */,

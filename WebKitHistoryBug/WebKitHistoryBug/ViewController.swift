@@ -12,22 +12,34 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView?
     @IBOutlet weak var backButton: UIButton?
+    @IBOutlet weak var retainWebViewSwitch: UISwitch!
+    
+    private var retainWebView = false
     private var webView: WKWebView?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     private func removeAndRecreateWebView() {
-        webView?.removeFromSuperview()
-        let wv = WKWebView(frame: CGRect(x: 0.0, y: 0.0, width: containerView?.frame.width ?? 0.0, height: containerView?.frame.height ?? 0.0))
-        containerView?.addSubview(wv)
-        self.webView = wv
+        if !retainWebView {
+            webView?.removeFromSuperview()
+            self.webView = nil
+        }
+        
+        if webView == nil {
+            let wv = WKWebView(frame: CGRect(x: 0.0, y: 0.0, width: containerView?.frame.width ?? 0.0, height: containerView?.frame.height ?? 0.0))
+            containerView?.addSubview(wv)
+            self.webView = wv
+        }
     }
     
     @IBAction func goBack(sender: UIButton){
         webView?.evaluateJavaScript("window.history.back();") { _, _ in
-            
         }
+    }
+    
+    @IBAction func switchValueChanged(_ sender: Any) {
+        retainWebView = retainWebViewSwitch.isOn
     }
     
     @IBAction func loadURLFromFile() {

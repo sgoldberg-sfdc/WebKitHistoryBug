@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
     <style>
         button {
-            font-size: 40px;
+            font-size: 20px;
         }
     </style>
     <body>
+        <p>This button will navigate to www.apple.com. Pressing the native Back button below will use Window.history.back() which should navigate back to this page.</p>
         <button type="button" title="Navigate" onclick="navigateForward()">Navigate</button>
     </body>
 
